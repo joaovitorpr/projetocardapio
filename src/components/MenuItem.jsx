@@ -9,6 +9,7 @@ export const MenuItem = ({titulo,preco,img,descricao}) => {
                 {/*toFixed pega duas casas depois da virgula*/}
                 <p>R$ {preco.toFixed(2)}</p>
             </header>
+            <p>{descricao}</p>
         </div>
     </article>
   )

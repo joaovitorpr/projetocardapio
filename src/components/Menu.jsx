@@ -1,8 +1,12 @@
-import React from 'react'
+import MenuItem from "./MenuItem";
 
-export const Menu = () => {
+export const Menu = ({items}) => {
   return (
-    <div>Menu</div>
+    <div>
+      {items.map((item)=>(
+        <MenuItem key={item} {...item}/>
+      ))}
+    </div>
   )
 }
 
