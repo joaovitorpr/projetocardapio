@@ -1,9 +1,28 @@
-import React from 'react'
 
-export const Categorias = () => {
+
+export const Categorias = ({categorias,filtroItems}) => {
+  const produtos=(opcao)=>{
+    switch(opcao.toLowerCase()){
+      case "Ação":
+        return;
+      case "Terror":
+        return;
+      case "Aventura":
+        return;
+      default:
+        return null;
+    }
+  }
   return (
-    <div>Categorias</div>
+    <nav>
+      {categorias.map((opcao,index)=>(
+        <button key={index} onClick={()=>filtroItems(opcao)}>
+          {produtos(opcao)}
+          {opcao}
+        </button>
+      ))}
+    </nav>
   )
 }
 
-export default Categorias;
+export default Categorias
